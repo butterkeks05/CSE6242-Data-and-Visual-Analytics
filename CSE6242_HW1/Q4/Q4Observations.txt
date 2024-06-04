@@ -1,0 +1,11 @@
+i.rows: 47
+
+ii.columns: 5
+
+iii.ngram-fingerprint: 120
+
+iv.grel:value.coalesce("Unknown")
+
+v.grel:if(value.toNumber() > 90, "1", "0")
+
+vi.grel:if(value.toLowercase().contains("discount").or (value.toLowercase().contains("offer").or (value.toLowercase().contains("sale"))),1,0)
